@@ -7,9 +7,10 @@
   
   This example code is in the public domain.
 */
-
-midiNotes notes1[] = {NOTE_C2, NOTE_C2, NOTE_G2, NOTE_G2, NOTE_A2, NOTE_A2, NOTE_G2, NOTE_F2, NOTE_F2, NOTE_E2, NOTE_E2, NOTE_D2, NOTE_D2, NOTE_C2};
-midiNotes notes[] = {NOTE_C2, NOTE_C2, NOTE_C2, NOTE_D2, NOTE_E2, NOTE_E2, NOTE_D2, NOTE_E2, NOTE_F2, NOTE_G2, NOTE_C3, NOTE_C3, NOTE_C3, NOTE_G2, NOTE_G2, NOTE_G2, NOTE_E2, NOTE_E2, NOTE_E2, NOTE_C2, NOTE_C2, NOTE_C2, NOTE_G2, NOTE_F2, NOTE_E2, NOTE_D2, NOTE_C2};
+// Twinkle Little Star
+midiNotes notes[] = {NOTE_C2, NOTE_C2, NOTE_G2, NOTE_G2, NOTE_A2, NOTE_A2, NOTE_G2, NOTE_F2, NOTE_F2, NOTE_E2, NOTE_E2, NOTE_D2, NOTE_D2, NOTE_C2};
+// Row Your Boat
+midiNotes notes1[] = {NOTE_C2, NOTE_C2, NOTE_C2, NOTE_D2, NOTE_E2, NOTE_E2, NOTE_D2, NOTE_E2, NOTE_F2, NOTE_G2, NOTE_C3, NOTE_C3, NOTE_C3, NOTE_G2, NOTE_G2, NOTE_G2, NOTE_E2, NOTE_E2, NOTE_E2, NOTE_C2, NOTE_C2, NOTE_C2, NOTE_G2, NOTE_F2, NOTE_E2, NOTE_D2, NOTE_C2};
 
 const int buttonPin = 0;
 int previousButtonReading = 0;
@@ -34,7 +35,7 @@ void loop() {
     BeanMidi.noteOff(CHANNEL1, notes[index], 90); // release note
 
     //FIXME make 13 a dynamic variable, last item in array
-    if (index >= 26) {
+    if (index >= 13) {
       index = 0;
     } else {
       index++;
